@@ -11,7 +11,8 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/saurav4578/devops.git' // Replace with your repo
+                // Clone the repository from GitHub and specify the branch (main instead of master)
+                git branch: 'main', url: 'https://github.com/saurav4578/devops.git' // Replace with your repo
             }
         }
 
