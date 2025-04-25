@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        docker 'Docker' // Specify Docker installation name
+    }
+
     environment {
         IMAGE_NAME = 'ecommerce-site'
         CONTAINER_NAME = 'ecommerce-container'
@@ -11,8 +15,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                // Clone the repository from GitHub and specify the branch (main instead of master)
-                git branch: 'main', url: 'https://github.com/saurav4578/devops.git' // Replace with your repo
+                git branch: 'main', url: 'https://github.com/saurav4578/devops.git'
             }
         }
 
