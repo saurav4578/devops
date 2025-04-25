@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Clone Code') {
             steps {
-                git 'https://github.com/sauravkumar2004/devopsproject.git' // Replace with your repo
+                git 'https://github.com/saurav4578/devops.git' // Replace with your repo
             }
         }
 
